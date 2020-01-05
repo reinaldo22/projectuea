@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/places"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Novos lugares</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <ion-input type="text" placeholder="Título:" #title></ion-input><br>
+          <ion-input type="text" placeholder="http://imageDoSite" #imagemURL></ion-input>
+          <ion-input type="text" placeholder="Comentário:" #comments></ion-input>
+          <ion-button color="primary" (click)="saveNewPlace(title, imagemURL, comments)">
+            Salvar
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
